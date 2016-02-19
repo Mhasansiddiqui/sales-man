@@ -1,0 +1,18 @@
+    <md-sidenav style="height:820px;" class="md-sidenav-left md-whiteframe-24dp" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+      <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">Companies</h1>
+      </md-toolbar>
+      <md-content layout-padding="" >       
+        <p hide-md="" show-gt-md="">
+    <section layout="row" layout-wrap>
+        <md-content>
+            <md-list>
+                <md-list-item class="md-2-line" ng-repeat="d in detail.data ">
+                    <a ng-link="employee({id : d._id })">{{d.companyName}}</a>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </section>
+</p>
+      </md-content>
+    </md-sidenav>

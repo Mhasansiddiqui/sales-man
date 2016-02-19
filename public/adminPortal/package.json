@@ -1,0 +1,17 @@
+{
+  "name": "adminportal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular-material-data-table": "^0.9.11",
+    "angularfire": "^1.1.3",
+    "firebase": "^2.4.0",
+    "ngmap": "^1.16.8"
+  }
+}

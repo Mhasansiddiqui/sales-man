@@ -1,0 +1,82 @@
+
+<form  method="post" >
+    <section layout="row" layout-align="center center" layout-wrap>
+<!--
+<div class="file_input_div">
+    <div class="file_input">
+      <label class="image_input_button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--colored">
+        <i class="material-icons">file_upload</i>
+        <input id="file_input_file" class="none" type="file" />
+      </label>
+    </div>
+    <div id="file_input_text_div" class="mdl-textfield mdl-js-textfield textfield-demo">
+      <input class="file_input_text mdl-textfield__input" type="text" disabled readonly id="file_input_text" />
+      <label class="mdl-textfield__label" for="file_input_text"></label>
+    </div>
+  </div>-->
+
+        <md-input-container>
+            <label>Email</label>
+            <input ng-model="employee.email"  type="email" required >
+        </md-input-container>
+     
+                
+        <md-input-container>
+            <label>User Name</label>
+            <input ng-model="employee.userName" >
+        </md-input-container>
+
+
+        <md-input-container>
+            <label>Password</label>
+            <input ng-model="employee.password" type="password" >
+        </md-input-container>
+
+  <md-input-container>
+            <label>Phone</label>
+            <input ng-model="employee.phone" >
+        </md-input-container>
+
+        <md-input-container>
+            <label>Created By</label>
+            <input ng-model="employee.createdBy" >
+        </md-input-container>
+
+
+        <md-button ng-click="employee.CreateEmployee()" class="md-raised md-primary">Create</md-button>
+
+        <!---->
+        <!--<input type="text" ng-model="employee.email" />-->
+    <!--<input type="text" ng-model="employee.userName" />-->
+    <!--<input type="text" ng-model="employee.password" />-->
+    <!--<input type="text" ng-model="employee.createdBy" value='12/12/2005' />-->
+    <!--<button ng-click="employee.CreateEmployee()">Create</button>-->
+        </section>
+</form>
+              
+       
+<md-data-table-container>
+ <table md-table>     
+  <thead md-head >
+      <tr md-row ng-class=" {'header' : true } ">
+        <th md-column md-order-by="nameToLower"><span>User Name</span></th>      
+              <th md-column md-order-by="nameToLower"><span>Phone</span></th>              
+              <th md-column md-order-by="nameToLower"><span></span></th>
+      </tr>   
+  </thead>        
+  <tbody md-body>
+   <tr md-row  ng-repeat=" d in  employee.data">
+      <td md-cell>{{d.userName}}</td>
+      <td md-cell>{{d.phone}}</td>  
+       <td md-cell>   <a href="./Order/{{d.companyId}}/{{d._id}}" >View Order </a> </td>         
+     </tr>
+  </tbody>   
+    </table>
+</md-data-table-container>
+       
+              
+ 
+<!--<p href="#"  ng-repeat="d in employee.data "  >-->
+    <!--<a ng-link="employee({id : d._id })">{{d}}</a>-->
+<!--</p>-->
+    <!---->

@@ -1,0 +1,31 @@
+<md-content class="md-padding" layout-xs="column" layout="column">
+    <div flex-xs flex-gt-xs="50" layout="column">
+      <md-card ng-repeat="d in   order.orderdata " >
+        <md-card-title>
+          <md-card-title-text>         
+                <h2>Name</h2>       {{d.Name}}
+               <h2>Quantity</h2>  {{d.Quantity}}   
+            <span class="md-headline">
+                   <ng-map id="map"  zoom="18" center="[{{d.Longitude}}, {{d.Latitude}}]" >
+                     <marker position="{{d.Longitude}},{{d.Latitude}}"  ></marker>
+                    </ng-map>  
+                    </span>
+            <span class="md-subhead"> {{d.LocationName}}  </span>
+          </md-card-title-text>
+  
+        </md-card-title>
+      </md-card>
+      </div>
+</md-content>
+
+<!--
+<md-list layout="row" layout-wrap>
+    <md-list-item class="md-2-line" flex ng-repeat="d in   order.orderdata ">
+        <div flex class="md-list-item-text">
+            <div class="md-list-item-text" layout="column">    
+            
+              
+            </div>
+        </div>
+    </md-list-item>
+</md-list>-->
