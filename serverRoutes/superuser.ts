@@ -5,7 +5,7 @@ import bodyparser = require('body-parser');
 
 
 import {SaveUserObject }  from './../database/Schema/UserSchema' ;
-let staticDIR = filepath.resolve(__dirname , "./../../client/superuser");
+let staticDIR = filepath.resolve(__dirname , "./../client/superuser");
 
 
 var Firebase = require('firebase');

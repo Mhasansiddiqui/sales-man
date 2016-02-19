@@ -4,7 +4,7 @@ var bodyparser = require('body-parser');
 var OrderSchema_1 = require('./../database/Schema/OrderSchema');
 // import {connectionToDb}  from './../database/Connection' ;
 // connectionToDb(); 
-var a = filepath.resolve(__dirname, './../../client/salesMan/www');
+var a = filepath.resolve(__dirname, './../client/salesMan/www');
 exports.salesman = express.Router();
 exports.salesman.use(bodyparser.json());
 exports.salesman.use(bodyparser.urlencoded({ extended: false }));

@@ -22,7 +22,7 @@ import {FindEmployeeData,SaveEmployeeObject} from './../database/Schema/Employee
 
 export var admin = express.Router();
 
-let staticDIR = filepath.resolve(__dirname , "./../../client/adminPortal");
+let staticDIR = filepath.resolve(__dirname , "./../public/adminPortal");
 
 admin.use(bodyparser.json());
 admin.use( bodyparser.urlencoded({extended  : false }) );

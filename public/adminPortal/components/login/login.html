@@ -4,13 +4,13 @@
     <section layout="column" layout-align="center center" layout-wrap>
     <md-input-container>
         <label>Email</label>
-        <input ng-model="login.email" >
+        <input ng-model="login.email" placeholder="admin@gmail.com" >
     </md-input-container>
 
 
     <md-input-container>
         <label>Password</label>
-        <input type="password" ng-model="login.password">
+        <input type="password" ng-model="login.password" placeholder="admin">
     </md-input-container>
 
     <md-button ng-click="login.login()" class="md-raised md-primary">Login</md-button>
