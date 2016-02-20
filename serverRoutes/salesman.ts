@@ -8,7 +8,7 @@ import {SaveOrderObject , FindCurrentEmployee}  from './../database/Schema/Order
 // import {connectionToDb}  from './../database/Connection' ;
 // connectionToDb(); 
 
-var a = filepath.resolve(__dirname,'./../client/salesMan/www') ;
+var a = filepath.resolve(__dirname,'./../public/salesMan/www') ;
 
 export var salesman = express.Router();
 
