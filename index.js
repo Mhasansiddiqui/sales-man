@@ -1,8 +1,8 @@
 /// <reference path="./typings/node/node.d.ts" />  
 var express = require("express");
 //Custom files start //
-var connection_1 = require('./database/connection');
-connection_1.connectionToDb();
+var Connection_1 = require('./database/Connection');
+Connection_1.connectionToDb();
 var admin_1 = require('./serverRoutes/admin');
 var salesman_1 = require('./serverRoutes/salesman');
 var general_1 = require('./serverRoutes/general');
