@@ -13,7 +13,7 @@ exports.salesman.post('/CreateOrder', function (req, res) {
     OrderSchema_1.SaveOrderObject(req.body);
     console.log(req.body);
 });
-exports.salesman.post('/', function (req, res) {
+exports.salesman.get('/', function (req, res) {
     res.send(0);
 });
 exports.salesman.post('/login', function (req, res) {

@@ -22,7 +22,7 @@ salesman.post('/CreateOrder' , function(req,res){
    console.log(req.body);
 })
 
-salesman.post('/' , function(req,res){     
+salesman.get('/' , function(req,res){     
    res.send(0);
 })
 
