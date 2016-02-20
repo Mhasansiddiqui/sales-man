@@ -22,6 +22,10 @@ salesman.post('/CreateOrder' , function(req,res){
    console.log(req.body);
 })
 
+salesman.post('/' , function(req,res){     
+   res.send(0);
+})
+
 
 salesman.post('/login', (req : express.Request , res : express.Response)=>{
     console.log(req.body);
