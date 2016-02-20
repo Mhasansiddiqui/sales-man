@@ -14,7 +14,7 @@ import {superuser} from './serverRoutes/superuser';
 //Custom files end //  
 //connecting to Database
 let  app = express();
-app.set("port", process.env.PORT || 3000);
+app.set("port", (process.env.PORT || 5000));
 app.use('/admin' , admin );
 app.use('/salesman' , salesman);
 app.use('/superuser' , superuser);

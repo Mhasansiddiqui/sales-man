@@ -14,7 +14,7 @@ var CompanySchema_1 = require('./../database/Schema/CompanySchema');
 var EmployeeSchema_1 = require('./../database/Schema/EmployeeSchema');
 //
 exports.admin = express.Router();
-var staticDIR = filepath.resolve(__dirname, "./../../client/adminPortal");
+var staticDIR = filepath.resolve(__dirname, "./../public/adminPortal");
 exports.admin.use(bodyparser.json());
 exports.admin.use(bodyparser.urlencoded({ extended: false }));
 exports.admin.post('/ViewOrder', function (req, res) {

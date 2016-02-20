@@ -10,7 +10,7 @@ var superuser_1 = require('./serverRoutes/superuser');
 //Custom files end //  
 //connecting to Database
 var app = express();
-app.set("port", process.env.PORT || 3000);
+app.set("port", (process.env.PORT || 5000));
 app.use('/admin', admin_1.admin);
 app.use('/salesman', salesman_1.salesman);
 app.use('/superuser', superuser_1.superuser);
