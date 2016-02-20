@@ -1,0 +1,99 @@
+{
+  "_args": [
+    [
+      "ngmap",
+      "C:\\Users\\Hasan siddiqui\\Desktop\\SALEMAN_APP\\salesman\\client\\adminPortal"
+    ]
+  ],
+  "_from": "ngmap@*",
+  "_id": "ngmap@1.16.8",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/ngmap",
+  "_nodeVersion": "0.12.7",
+  "_npmUser": {
+    "email": "allenhwkim@gmail.com",
+    "name": "allenkim"
+  },
+  "_npmVersion": "2.11.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "ngmap",
+    "raw": "ngmap",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "*",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ngmap/-/ngmap-1.16.8.tgz",
+  "_shasum": "734863ff79953417d7d21d0c66ac10c950555da2",
+  "_shrinkwrap": null,
+  "_spec": "ngmap",
+  "_where": "C:\\Users\\Hasan siddiqui\\Desktop\\SALEMAN_APP\\salesman\\client\\adminPortal",
+  "dependencies": {},
+  "description": "GoogleMap AngularJS Directive =============================",
+  "devDependencies": {
+    "angular-jsdoc": "^1.1.3",
+    "cheerio": "^0.19.0",
+    "compression": "~1.0.6",
+    "express": "~4.4.1",
+    "glob": "~4.0.2",
+    "gulp": "^3.8.0",
+    "gulp-bump": "~0.1.9",
+    "gulp-clean": "~0.3.0",
+    "gulp-concat": "~2.2.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-debug": "~0.3.0",
+    "gulp-html-replace": "~1.1.0",
+    "gulp-protractor": "^1.0.0",
+    "gulp-rename": "~1.2.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-rev": "~0.4.0",
+    "gulp-shell": "~0.2.7",
+    "gulp-strip-debug": "~0.3.0",
+    "gulp-tap": "~0.1.1",
+    "gulp-uglify": "~0.3.0",
+    "gulp-usemin": "^0.3.15",
+    "gulp-util": "~2.2.16",
+    "jsdoc": "^3.3.0-beta3",
+    "karma": "0.13.15",
+    "karma-chrome-launcher": "0.2.1",
+    "karma-jasmine": "0.2.2",
+    "karma-ng-html2js-preprocessor": "0.2.0",
+    "karma-phantomjs-launcher": "0.2.1",
+    "phantomjs": "1.9.18",
+    "run-sequence": "~0.3.6",
+    "selenium-webdriver": "^2.45.1",
+    "through2": "^2.0.0",
+    "uglify-save-license": "^0.4.1",
+    "vinyl": "^1.1.0",
+    "yargs": "^3.31.0",
+    "zeparser": "0.0.7"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "734863ff79953417d7d21d0c66ac10c950555da2",
+    "tarball": "http://registry.npmjs.org/ngmap/-/ngmap-1.16.8.tgz"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "gitHead": "d278a8e087d4d372d32118f3890472c493698eac",
+  "main": "build/scripts/ng-map.js",
+  "maintainers": [
+    {
+      "name": "allenkim",
+      "email": "allenhwkim@gmail.com"
+    }
+  ],
+  "name": "ngmap",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "version": "1.16.8"
+}
