@@ -2,6 +2,9 @@ import mongoose = require('mongoose');
 import q = require("q");
 
 import {FindEmployeeData} from './EmployeeSchema'
+import {FindCompanyData} from './CompanySchema'
+
+
 
 interface IOrderSchema extends mongoose.Document {
     Name: String,
@@ -10,7 +13,7 @@ interface IOrderSchema extends mongoose.Document {
     EmployeeId: String,
     Longitude :  String,
     Latitude : String ,
-    LocationName : String   
+    LocationName : String   ,
 }
 //create Schema
 
@@ -21,7 +24,9 @@ let OrderSchema = new mongoose.Schema({
     EmployeeId: String,
     Longitude :  String,
     Latitude : String ,
-    LocationName : String   
+    LocationName : String   ,
+    phone : String, 
+    CompanyName : String
 });
                  
 //compile Schema
@@ -29,7 +34,11 @@ let OrderModel = mongoose.model<IOrderSchema>("Order", OrderSchema);
 
 //function saving object 
 export function SaveOrderObject(OrderObj) {
+    
+    
     console.log(OrderObj);
+    
+    
     let Order = new OrderModel(OrderObj);
     Order.save((err, success) => {
         if (!err) {
@@ -41,8 +50,14 @@ export function SaveOrderObject(OrderObj) {
     });
 }
 
+export function findCompanyOrder() {
+    
+    
+}
 export function FindOrderData(OrderObject) {    
-        let deferred = q.defer();        
+        let deferred = q.defer();
+        
+                
     OrderModel.find( OrderObject , (err, res) => {
           if(res){             
              deferred.resolve(res);
@@ -56,8 +71,6 @@ export function FindOrderData(OrderObject) {
 }
 
 export function FindCurrentEmployee(OrderObject) {
-
     return FindEmployeeData(OrderObject);
-
 }
     

@@ -1,27 +1,21 @@
 angular.module('app')
     .controller('DetailController', function (OrderDetailService, ComanyDetailService, FBURL, $timeout, $mdSidenav, $log, $routeParams) {
-        
-        
         var id = $routeParams.id;
-        var vm = this;
-        
-        
+        var vm = this;                
         ComanyDetailService.ComanyDetail(id).then(function successCallback(response) {
+          //  console.log(response.data.user);
             vm.data = response.data.user;
         }, function errorCallback(response) {
-
-        });
-        
-        
+        });                
         OrderDetailService.$loaded(
             function (x) {
-                vm.Orders = x[0];              
+                console.log(x);
+                
+               vm.Orders = x ;     
             }, function (error) {
                 console.error("Error:", error);
-            });
-            
-            
-            
+            });           
+                        
         this.toggleLeft = buildDelayedToggler('left');
         function debounce(func, wait, context) {
             var timer;
@@ -44,9 +38,7 @@ angular.module('app')
 
                     });
             }, 200);
-        }
-        
-        
+        }               
     }).service('ComanyDetailService', function ($http) {
         var vm = this;
         this.ComanyDetail = function (id) {
@@ -61,7 +53,7 @@ angular.module('app')
         return a;
     })
     .directive("company", function () {
-        return {
+        return {         
             templateUrl: 'components/detail/sideNav.html'
         };
     }).constant('FBURL', 'https://sales-man.firebaseio.com/')    

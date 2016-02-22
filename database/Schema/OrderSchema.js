@@ -9,7 +9,9 @@ var OrderSchema = new mongoose.Schema({
     EmployeeId: String,
     Longitude: String,
     Latitude: String,
-    LocationName: String
+    LocationName: String,
+    phone: String,
+    CompanyName: String
 });
 //compile Schema
 var OrderModel = mongoose.model("Order", OrderSchema);
@@ -27,6 +29,9 @@ function SaveOrderObject(OrderObj) {
     });
 }
 exports.SaveOrderObject = SaveOrderObject;
+function findCompanyOrder() {
+}
+exports.findCompanyOrder = findCompanyOrder;
 function FindOrderData(OrderObject) {
     var deferred = q.defer();
     OrderModel.find(OrderObject, function (err, res) {

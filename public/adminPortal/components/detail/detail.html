@@ -19,30 +19,38 @@
                     <table md-table>
                         <thead md-head>
                             <tr md-row ng-class=" {'header' : true } ">
-                                <th md-column md-order-by="nameToLower"><span>Location</span></th>
+                                <th md-column md-order-by="nameToLower"><span>Location</span></th>                                
                                 <th md-column md-order-by="nameToLower"><span>Name</span></th>
                                 <th md-column md-order-by="nameToLower"><span>Quantity</span></th>
+                                <th md-column md-order-by="nameToLower"><span>Phone</span></th>
+                                <th md-column md-order-by="nameToLower"><span>Company Name</span></th>                                
                                 <th md-column md-order-by="nameToLower"><span></span></th>
                                 <th md-column md-order-by="nameToLower"><span></span></th>
                                 <th md-column md-order-by="nameToLower"><span></span></th>
+                                 <th md-column md-order-by="nameToLower"><span></span></th>
                             </tr>
                         </thead>
                         <tbody md-body>
-                            <tr md-row ng-repeat="e in detail.Orders " track by $index ng-class=" {'pending-delete' : item.checked  } ">
+                            <tr md-row ng-repeat="e in detail.Orders " ng-class=" {'pending-delete' : item.checked  } ">                                
                                 
-                                <td md-cell> {{e.LocationName}} </td>
+                            <tr  md-row ng-repeat="b in e"> 
+                                <td md-cell> {{e}} </td> 
+                             </tr>
+                                
+                                <!--<td md-cell> {{e.LocationName}} </td>
                                 <td md-cell> {{e.Name}} </td>
                                 <td md-cell> {{e.Quantity}} </td>
+                                <td md-cell> {{e.phone}} </td>
+                                  <td md-cell> {{e.companyName}} </td>
+                                <td md-cell> {{detail.Orders.companyName}} </td>
                                 <td md-cell>
                                     <a href="./Order/{{e.CompanyId}}/{{e.EmployeeId}}">View Order </a>
                                 </td>
                                 <td md-cell>                              
                                     <md-checkbox counter-click ng-model="item.checked" aria-label="Checkbox 1" > 00:{{count}} </md-checkbox>
                                 </td>
-                                   <td md-cell>            
-                                </td>
-                                
-                               
+                                   <td md-cell>                              
+                                  </td>-->
                             </tr>
                           
                         </tbody>

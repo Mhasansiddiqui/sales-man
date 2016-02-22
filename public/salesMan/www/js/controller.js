@@ -18,7 +18,9 @@ angular.module('starter')
                  $rootScope._id = object._id ;                                 
                  $rootScope.companyId = response.data.user[0].companyId ;
                  $rootScope.ownerId = response.data.user[0].createdBy ;                
-                 localStorage.setItem('UserId' ,  $rootScope._id ) ;                 
+                 localStorage.setItem('UserId' ,  $rootScope._id ) ;  
+                 $rootScope.phone =  response.data.user[0].phone;
+                 $rootScope.companyName =  response.data.user[0].companyName;               
                  $state.go('Order');
             }, function errorCallback(response) {
                 console.log('can,t login');
@@ -33,11 +35,14 @@ angular.module('starter')
        //Create User Data  
        userrefrence.$add({                            
                     Name :  vm.name ,
-                    Quantity : vm.quantity ,      EmployeeId : $rootScope._id ,              
+                    Quantity : vm.quantity , 
+                    EmployeeId : $rootScope._id ,              
                     CompanyId : $rootScope.companyId,
                     Longitude : ""+ $rootScope.latitude,
                     Latitude : ""+ $rootScope.longitude ,
-                    LocationName :  "" + $rootScope.formatedAddress
+                    LocationName :  "" + $rootScope.formatedAddress,
+                    phone :   $rootScope.phone  ,
+                    companyName : $rootScope.companyName     
                     
        })                       
             $http({
@@ -49,7 +54,9 @@ angular.module('starter')
                     CompanyId : $rootScope.companyId,
                     Longitude : ""+ $rootScope.latitude,
                     Latitude : ""+ $rootScope.longitude ,
-                    LocationName :  "" + $rootScope.formatedAddress                      
+                    LocationName :  "" + $rootScope.formatedAddress     ,
+                    phone :   $rootScope.phone     ,
+                        
                 },
                 url: './CreateOrder'
             }).then(function successCallback(response) {

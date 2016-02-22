@@ -1,36 +1,26 @@
-<form  method="post">
-    <section layout="column" layout-align="center center" layout-wrap>
 
+    <section layout="column" layout-align="center center" layout-wrap>
+       <form  method="post" name="companyFom">
         <md-input-container>
             <label>Email</label>
-            <input ng-model="company.email" required="email" >
+            <input ng-model="company.email" required="email" type="email" required >
         </md-input-container>
 
         <md-input-container>
             <label>User Name</label>
-            <input ng-model="company.CompanyName" >
+            <input ng-model="company.CompanyName" required >
         </md-input-container>
-
 
         <md-input-container>
             <label>Password</label>
-            <input type="password" ng-model="company.password" >
+            <input type="password" ng-model="company.password" required >
         </md-input-container>
-
 
         <md-input-container>
             <label>Created By</label>
-            <input ng-model="company.createdBy" >
+            <input ng-model="company.createdBy" required>
         </md-input-container>
 
-
-        <md-button ng-click="company.CreateCompany()" class="md-raised md-primary">Create</md-button>
-
-        <!---->
-        <!--<input type="text" ng-model="employee.email" />-->
-        <!--<input type="text" ng-model="employee.userName" />-->
-        <!--<input type="text" ng-model="employee.password" />-->
-        <!--<input type="text" ng-model="employee.createdBy" value='12/12/2005' />-->
-        <!--<button ng-click="employee.CreateEmployee()">Create</button>-->
+        <md-button ng-disabled="companyFom.$invalid || !companyFom.$dirty" ng-click="company.CreateCompany()" class="md-raised md-primary">Create</md-button>
+         </form>
     </section>
-</form>

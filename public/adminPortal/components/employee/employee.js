@@ -8,7 +8,8 @@ angular.module('app')
         }).then(function successCallback(response) {
             vm.data = response.data.user ;
         }, function errorCallback(response) {
-        });                   
+        });   
+                        
         this.CreateEmployee = function(){
             $http({
                 method: 'POST',
@@ -27,4 +28,14 @@ angular.module('app')
                  tost.getTost('Saving Employee Fail');
             });
         }     
-    }]);
+    }])
+    .directive('chooseFileButton', function() {
+     return {
+     restrict: 'A',
+     link: function (scope, elem, attrs) {
+        elem.bind('click', function() {
+              angular.element(document.querySelector('#' + attrs.chooseFileButton))[0].click();
+              });
+            }
+      };
+    });

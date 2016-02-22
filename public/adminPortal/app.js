@@ -1,7 +1,7 @@
 /**
  * Created by Students on 2/2/2016.
  */
-angular.module('app', ['ngNewRouter' , 'ngMaterial',  'ngMap' , 'firebase' , 'md.data.table'  ])
+angular.module('app', ['ngNewRouter' , 'ngMaterial', 'ngMdIcons' , 'ngFileUpload' , 'ngMap' , 'firebase' , 'md.data.table'  ])
     .controller('AppController', ['$router' ,'$location' , '$rootScope' , function ($router , $location  , $rootScope) {
         
         this.logOut = function(){

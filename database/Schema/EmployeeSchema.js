@@ -7,6 +7,7 @@ var EmployeeSchema = new mongoose.Schema({
     password: String,
     createdBy: String,
     companyId: String,
+    companyName: String,
     phone: String,
     createdOn: { type: Date },
     employeeId: String

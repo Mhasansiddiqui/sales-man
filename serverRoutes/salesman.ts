@@ -2,7 +2,11 @@ import express = require('express');
 import filepath =  require('path');
 
 import bodyparser = require('body-parser');
+
+
+
 import {SaveOrderObject , FindCurrentEmployee}  from './../database/Schema/OrderSchema' ;
+import {FindCompanyData}  from './../database/Schema/CompanySchema' ;
 
 
 // import {connectionToDb}  from './../database/Connection' ;
@@ -28,10 +32,17 @@ salesman.get('/' , function(req,res){
 
 
 salesman.post('/login', (req : express.Request , res : express.Response)=>{
-    console.log(req.body);
     
      FindCurrentEmployee(req.body).then((instance)=>{
-        	res.send({status : true, user : instance});
+            var cId =  instance[0].companyId ;
+            var object = { _id : cId };
+             FindCompanyData(object).then((data) =>{
+             instance[0].companyName = data[0].companyName ;  
+             res.send({status : true, user : instance});             
+             },(err)=>{
+                 
+             })
+         
      },(err)=>{
        	res.send({status : true, user : err});
          }

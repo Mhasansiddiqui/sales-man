@@ -1,20 +1,15 @@
 
-<form  method="post" >
     <section layout="row" layout-align="center center" layout-wrap>
-<!--
-<div class="file_input_div">
-    <div class="file_input">
-      <label class="image_input_button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--colored">
-        <i class="material-icons">file_upload</i>
-        <input id="file_input_file" class="none" type="file" />
-      </label>
-    </div>
-    <div id="file_input_text_div" class="mdl-textfield mdl-js-textfield textfield-demo">
-      <input class="file_input_text mdl-textfield__input" type="text" disabled readonly id="file_input_text" />
-      <label class="mdl-textfield__label" for="file_input_text"></label>
-    </div>
-  </div>-->
+        
+<form  method="post" name="myFrmName" >
+    
+    <md-button choose-file-button="file-input" aria-label="xxx"
+            class="md-fab" ng-click="">
+    <md-icon md-svg-icon="components/employee/photo.svg"></md-icon>
+ </md-button>
 
+  <input style="display: none" id="file-input" type="file">
+     
         <md-input-container>
             <label>Email</label>
             <input ng-model="employee.email"  type="email" required >
@@ -23,18 +18,18 @@
                 
         <md-input-container>
             <label>User Name</label>
-            <input ng-model="employee.userName" >
+            <input ng-model="employee.userName" required>
         </md-input-container>
 
 
         <md-input-container>
             <label>Password</label>
-            <input ng-model="employee.password" type="password" >
+            <input ng-model="employee.password" type="password" required >
         </md-input-container>
 
   <md-input-container>
             <label>Phone</label>
-            <input ng-model="employee.phone" >
+            <input ng-model="employee.phone" type="number" required>
         </md-input-container>
 
         <md-input-container>
@@ -42,17 +37,20 @@
             <input ng-model="employee.createdBy" >
         </md-input-container>
 
+   <md-input-container>
+            <md-button ng-disabled="myFrmName.$invalid || !myFrmName.$dirty" type="submit" ng-click="employee.CreateEmployee()"class="md-raised md-primary">Create</md-button>
 
-        <md-button ng-click="employee.CreateEmployee()" class="md-raised md-primary">Create</md-button>
-
+        </md-input-container>
+       
         <!---->
         <!--<input type="text" ng-model="employee.email" />-->
     <!--<input type="text" ng-model="employee.userName" />-->
     <!--<input type="text" ng-model="employee.password" />-->
     <!--<input type="text" ng-model="employee.createdBy" value='12/12/2005' />-->
     <!--<button ng-click="employee.CreateEmployee()">Create</button>-->
+    </form>
         </section>
-</form>
+
               
        
 <md-data-table-container>
