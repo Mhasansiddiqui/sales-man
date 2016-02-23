@@ -15,10 +15,8 @@ angular.module('app')
                     createdBy : vm.createdBy,
                 },
                 url: './CreateCompany'
-            }).then(function successCallback(response) {         
-                       
+            }).then(function successCallback(response) {  
                 tost.getTost('Company Created');
-                       
             }, function errorCallback(response) {
                  tost.getErrorTost('Creating Company Fail');   
             });
