@@ -43,6 +43,7 @@ angular.module('app', ['ngNewRouter' , 'ngMaterial', 'ngMdIcons' , 'ngFileUpload
                     .textContent(msg)                   
                     .hideDelay(3000)
                 );
+                
        }      
        this.getErrorTost = function(msg){          
                $mdToast.show(
