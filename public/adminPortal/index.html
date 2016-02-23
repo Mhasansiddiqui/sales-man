@@ -40,11 +40,24 @@
 
 </head>
 <body ng-app="app" ng-controller="AppController as app">    
-      <md-toolbar>
+      <!--<md-toolbar>
       <div class="md-toolbar-tools">              
            <md-button ng-click="app.logOut()" ng-show="status"   >LogOut</md-button>
       </div>
-      </md-toolbar>
+      </md-toolbar>-->
+      <md-toolbar>
+      <div class="md-toolbar-tools">
+        <md-button aria-label="Go Back" ng-click="app.goback()">
+          Go Back
+        </md-button>
+        <h2>
+          <span>Dash Board</span>
+        </h2>
+        <span flex></span>
+           <md-button ng-click="app.logOut()" ng-show="status"   >LogOut</md-button>      
+      </div>
+    </md-toolbar>
+      
 <span>
 <div ng-viewport></div>
   

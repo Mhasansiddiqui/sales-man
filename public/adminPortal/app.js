@@ -2,12 +2,15 @@
  * Created by Students on 2/2/2016.
  */
 angular.module('app', ['ngNewRouter' , 'ngMaterial', 'ngMdIcons' , 'ngFileUpload' , 'ngMap' , 'firebase' , 'md.data.table'  ])
-    .controller('AppController', ['$router' ,'$location' , '$rootScope' , function ($router , $location  , $rootScope) {
+    .controller('AppController', ['$router' , '$location' , '$rootScope' , function ( $router , $location  , $rootScope) {
         
         this.logOut = function(){
              localStorage.clear();
              $location.path('/login');
              $rootScope.status = false;
+        }
+        this.goback = function(){
+          location.reload();
         }
         
         $router.config([
@@ -34,7 +37,8 @@ angular.module('app', ['ngNewRouter' , 'ngMaterial', 'ngMdIcons' , 'ngFileUpload
             $rootScope.status = true;
             
         }
-    }).config(function(){
+    })
+    .config(function(){
 
    } ).service('tost' , function($mdToast){             
        this.getTost = function(msg){          
