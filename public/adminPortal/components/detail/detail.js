@@ -8,9 +8,7 @@ angular.module('app')
         }, function errorCallback(response) {
         });                
         OrderDetailService.$loaded(
-            function (x) {
-                console.log(x);
-                
+            function (x) {                       
                vm.Orders = x ;     
             }, function (error) {
                 console.error("Error:", error);
@@ -62,16 +60,19 @@ angular.module('app')
             link: function (scope, element, attrs) {
                 scope.count = 10;      
                 element.bind('click', function () {          
-                    var counter = setInterval(function () {                        
+                    var counter = setInterval(function () { 
+                    
+                      if(scope.item.checked == true){
+                                                               
                         scope.count -= 1;                                                
                         if (scope.count == 0) {
                             var compId = scope.e.CompanyId;
                             var ref = new Firebase(FBURL);
+                            
                             var list = $firebaseArray(ref.child('Orders').child($rootScope.userID).child(compId));
                             list.$loaded(
                                 function (x) {
-                                    list.$remove(scope.$index).then(function (ref) {                                      
-                                  
+                                    list.$remove(scope.$index).then(function (ref) {    
                                  });
                                 }, function (error) {
                                     console.error("Error:", error);
@@ -81,8 +82,11 @@ angular.module('app')
                         scope.$apply(function () {
                             scope.count;                           
                         });
-                        $rootScope.$apply();
-                    }, 1000)
+                      }
+                      $rootScope.$apply();
+                        
+                     }, 1000)
+                    
                  })
               }
             }

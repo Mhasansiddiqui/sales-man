@@ -30,28 +30,40 @@
                                  <th md-column md-order-by="nameToLower"><span></span></th>
                             </tr>
                         </thead>
-                        <tbody md-body>
-                            <tr md-row ng-repeat="e in detail.Orders " ng-class=" {'pending-delete' : item.checked  } ">                                
-                                
-                            <tr  md-row ng-repeat="b in e"> 
-                                <td md-cell> {{e}} </td> 
-                             </tr>
-                                
-                                <!--<td md-cell> {{e.LocationName}} </td>
-                                <td md-cell> {{e.Name}} </td>
-                                <td md-cell> {{e.Quantity}} </td>
-                                <td md-cell> {{e.phone}} </td>
-                                  <td md-cell> {{e.companyName}} </td>
-                                <td md-cell> {{detail.Orders.companyName}} </td>
-                                <td md-cell>
+                        <tbody md-body  ng-repeat="f in detail.Orders ">
+                            <tr md-row ng-repeat="e in f " ng-class=" {'pending-delete' : item.checked  } ">                               
+                               <td md-cell > {{e.LocationName}} </td> </br>
+                                <td md-cell > {{e.Name}} </td>
+                                <td md-cell  > {{e.Quantity}} </td>
+                                <td md-cell > {{e.phone}} </td>
+                                  <td md-cell > {{e.companyName}} </td>
+                                <td md-cell > {{detail.Orders.companyName}} </td>
+                                <td md-cell  >
                                     <a href="./Order/{{e.CompanyId}}/{{e.EmployeeId}}">View Order </a>
                                 </td>
                                 <td md-cell>                              
                                     <md-checkbox counter-click ng-model="item.checked" aria-label="Checkbox 1" > 00:{{count}} </md-checkbox>
                                 </td>
-                                   <td md-cell>                              
-                                  </td>-->
+                                   <td md-cell >                              
+                                  </td>
                             </tr>
+                            
+                            <!--<tr md-row  ng-class=" {'pending-delete' : item.checked  } ">                                
+                               <td md-cell  ng-repeat="e in f"> {{e.LocationName}} </td> </br>
+                                <td md-cell  ng-repeat="e in f"> {{e.Name}} </td>
+                                <td md-cell  ng-repeat="e in f"> {{e.Quantity}} </td>
+                                <td md-cell  ng-repeat="e in f"> {{e.phone}} </td>
+                                  <td md-cell  ng-repeat="e in f"> {{e.companyName}} </td>
+                                <td md-cell  ng-repeat="e in f"> {{detail.Orders.companyName}} </td>
+                                <td md-cell  ng-repeat="e in f">
+                                    <a href="./Order/{{e.CompanyId}}/{{e.EmployeeId}}">View Order </a>
+                                </td>
+                                <td md-cell  ng-repeat="e in f">                              
+                                    <md-checkbox counter-click ng-model="item.checked" aria-label="Checkbox 1" > 00:{{count}} </md-checkbox>
+                                </td>
+                                   <td md-cell >                              
+                                  </td>
+                            </tr>-->
                           
                         </tbody>
                     </table>
