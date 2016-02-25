@@ -59,14 +59,12 @@ angular.module('app')
             return {
             link: function (scope, element, attrs) {
                 scope.count = 10;      
-                element.bind('click', function () {    
+                element.bind('click', function () {
                     
-                     
-                                   
-                    var counter = setInterval(function () { 
-                    
-                           if(scope.item.checked == true){
-                                                      
+                       
+                                         
+                      console.log( scope.item.checked );                               
+                    var counter = setInterval(function () {    
                         scope.count -= 1;                                                
                         if (scope.count == 0) {
                             var compId = scope.e.CompanyId;
@@ -87,9 +85,11 @@ angular.module('app')
                         });
                       
                       $rootScope.$apply();
-                         }
+                        
                      }, 1000)
-                  
+                     
+                     
+                     
                  })
               }
             }
