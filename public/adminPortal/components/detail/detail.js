@@ -62,11 +62,11 @@ angular.module('app')
                 element.bind('click', function () {    
                     
                      
-                      if(scope.item.checked == true){
-                               
+                                   
                     var counter = setInterval(function () { 
                     
-                                                               
+                           if(scope.item.checked == true){
+                                                      
                         scope.count -= 1;                                                
                         if (scope.count == 0) {
                             var compId = scope.e.CompanyId;
@@ -87,9 +87,9 @@ angular.module('app')
                         });
                       
                       $rootScope.$apply();
-                        
+                         }
                      }, 1000)
-                   }
+                  
                  })
               }
             }
