@@ -1,8 +1,8 @@
 var mongoose = require('mongoose');
 //--- Database Connection Start --- //
 function connectionToDb() {
-    var connection = 'mongodb://localhost:27017/salesman';
-    //let connection = 'mongodb://hasan:hasan@ds061385.mongolab.com:61385/sales-man';
+    //let connection = 'mongodb://localhost:27017/salesman';
+    var connection = 'mongodb://hasan:hasan@ds061385.mongolab.com:61385/sales-man';
     mongoose.connect(connection);
     mongoose.connection.on('connected', function () {
         console.log('connected to mongoose');
