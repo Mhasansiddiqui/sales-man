@@ -2,8 +2,8 @@
 //--- Database Connection Start --- //
 
  export function connectionToDb() {
- // let connection = 'mongodb://localhost:27017/salesman';
-  let connection = 'mongodb://hasan:hasan@ds061385.mongolab.com:61385/sales-man';
+  //let connection = 'mongodb://localhost:27017/salesman';
+ let connection = 'mongodb://hasan:hasan@ds061385.mongolab.com:61385/sales-man';
      mongoose.connect(connection);
      mongoose.connection.on('connected', () => {
          console.log('connected to mongoose');
