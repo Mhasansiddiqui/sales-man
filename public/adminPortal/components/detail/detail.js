@@ -61,9 +61,7 @@ angular.module('app')
                 scope.count = 10;      
                 element.bind('click', function () {
                     
-                       
-                                         
-                      console.log( scope.item.checked );                               
+                                                
                     var counter = setInterval(function () {    
                         scope.count -= 1;                                                
                         if (scope.count == 0) {
