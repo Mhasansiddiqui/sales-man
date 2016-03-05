@@ -10,7 +10,7 @@ angular.module('app', ['ngNewRouter' , 'ngMaterial', 'ngMdIcons' , 'ngFileUpload
              $rootScope.status = false;
         }
         this.goback = function(){
-          location.reload();
+             window.history.back();
         }
         
         $router.config([
